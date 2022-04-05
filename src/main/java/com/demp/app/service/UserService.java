@@ -25,7 +25,7 @@ public class UserService {
 	}
 
 	public User saveUser(UserRequest request) {
-		User user = User.build(0, request.getName(), request.getAge(), request.getMobileNo(), request.getEmail(),
+		User user = new User(0, request.getName(), request.getAge(), request.getMobileNo(), request.getEmail(),
 				request.getGender(), request.getNationality());
 		log.info("Saving user: {}", user);
 		return repo.save(user);
