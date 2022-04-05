@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "USER_TBL")
 public class User {
@@ -40,7 +39,8 @@ public class User {
 	private User() {
 	}
 
-	public User(int id, String name, int age, String mobileNo, String email, String gender, String nationality) {
+	public User(final int id, final String name, final int age, final String mobileNo, final String email,
+			final String gender, final String nationality) {
 		this.id = id;
 		this.name = name;
 		this.age = age;
