@@ -20,7 +20,7 @@ import com.demp.app.exception.UserNotFoundException;
 import com.demp.app.service.UserService;
 
 @RestController
-@RequestMapping(path = "/user")
+@RequestMapping(path = "/users")
 public class UserController {
 
 	private UserService service;
