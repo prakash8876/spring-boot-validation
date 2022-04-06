@@ -2,6 +2,7 @@ package com.demp.app.dto;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.validation.constraints.*;
 
 public class UserRequest {
@@ -17,9 +18,10 @@ public class UserRequest {
 	private String mobileNo;
 
 	@Email(message = "Invalid email address")
+	@Column(unique = true)
 	private String email;
 
-	private String gender;
+   	private String gender;
 
 	@NotBlank
 	private String nationality;
